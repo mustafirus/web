@@ -1,0 +1,82 @@
+@charset "UTF-8";
+/* CSS Document */
+#ss{
+	width:640px;
+	height:auto;
+}
+body>div     {
+	width:100%;
+}
+table.main{
+	margin:50px auto;
+}
+table.main1{
+	margin:auto;
+}
+table.menu {
+	margin-bottom: 40px;
+	width: 150px;
+}
+table.menu a{
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size: 24px;
+}
+td.addr{
+	font-size: 12px;
+	border-top-width: thin;
+	border-top-style: solid;
+	alignment-adjust: central;
+	text-align: center;
+	width: 320px;
+	font-family: Tahoma, Geneva, sans-serif;
+}
+td.addr2{
+	font-size: 12px;
+	alignment-adjust: central;
+	text-align: center;
+	width: 320px;
+	font-family: Verdana, Geneva, sans-serif;
+}
+td.email{
+	font-size: 14px;
+	border-top-width: thin;
+	border-top-style: solid;
+	alignment-adjust: central;
+	text-align: center;
+	width: 320px;
+	font-family: Verdana, Geneva, sans-serif;
+}
+td.email1{
+	font-size: 14px;
+	alignment-adjust: central;
+	text-align: center;
+	width:320px; 
+}
+td.addr1{
+	width:auto;
+	height:0px;
+}
+td.menu{
+	width:150px;
+}
+td{
+	margin: 0px;
+	padding: 0px;
+	vertical-align: bottom;
+}
+a{
+	font-style: normal;
+	text-decoration: none;
+	color: #000;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 14px;
+}
+table{ 
+border:none;
+
+} 
+/*{
+	border:solid thin;
+	margin:2px;
+	padding:2px;
+}/

@@ -1,0 +1,1111 @@
+/*
+* Float V1.0
+* Copyright 2013, rodbor
+* www.rodrigob.com
+* 6 Nov, 2013
+*/
+
+/*******************************************************
+Table of Contents
+********************************************************
+
+1: Typography
+2: Generic Styles
+3: Navigation
+4: Buttons
+5: Intro
+6: Work
+7: Work Single
+8: Services
+9: About
+10: Blog
+11: Single Post
+12: Footer
+13: Media Queries
+*/
+
+
+
+/*******************************************************
+1: Typography
+********************************************************/
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 170px;
+    font-weight: bold;
+    line-height: 200px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 62px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    margin: 0 0 40px 0;
+}
+
+h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 34px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+}
+
+h4 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+h5 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    margin-bottom: 20px;
+}
+
+h6 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    color: #fff;
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.6);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+p.headline-text {
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 80px;
+    text-align: center;
+    opacity: 0.85;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+/*******************************************************
+2: Generic Styles
+********************************************************/
+
+body {
+    background: #000;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+    z-index: 0;
+}
+
+#main {
+    position: relative;
+    z-index: 1;
+    background: url(../images/bg-main.jpg) center 99%;
+    background-size: cover;
+    overflow: hidden;
+}
+
+#topbar {
+    background: url(../images/texture.png) repeat;
+    height: 8px;
+}
+
+.line {
+    background: #fff;
+    position: relative;
+    margin: 0 auto;
+    width: 80px;
+    height: 1px;
+    margin-bottom: 28px;
+}
+
+.line2 {
+    background: #fff;
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    height: 1px;
+    margin: 45px 0;
+    opacity: 0.5;
+}
+
+
+
+/*******************************************************
+3: Buttons
+********************************************************/
+
+.button, button, input[type="submit"], input[type="reset"], input[type="button"] {
+    border: 1px dashed #fff;
+    -moz-border-radius: 1px;
+    -webkit-border-radius: 1px;
+    border-radius: 1px;
+    color: #fff;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: normal;
+    text-decoration: none;
+    cursor: pointer;
+    line-height: normal;
+    padding: 5px 10px;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+}
+
+.button:hover, button:hover, input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover {
+    background: #fff;
+    border: 1px solid #fff;
+    color: #292929;
+}
+
+.button:active, button:active, input[type="submit"]:active, input[type="reset"]:active, input[type="button"]:active {
+    background: #fff;
+    border: 1px solid #fff;
+    color: #292929;
+}
+
+.button.full-width, button.full-width, input[type="submit"].full-width, input[type="reset"].full-width, input[type="button"].full-width {
+    width: 100%;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    text-align: center; }
+
+/* Fix for odd Mozilla border & padding issues */
+button::-moz-focus-inner, input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+
+
+/*******************************************************
+4: Navigation (see more in stylesheets/nav-component.css)
+********************************************************/
+
+.ha-header-front {
+    text-align: center;
+}
+
+ul.firstnav {
+    margin: 20px 0 0 0;
+}
+
+ul.firstnav li, nav ul li {
+    display: inline;
+    margin: 0 30px;
+    color: #fff;
+}
+
+.ha-header-front a {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+nav a {
+    color: #292929;
+}
+
+nav a:visited {
+    color: #292929;
+}
+
+nav a:hover {
+    color: #5b5b5b;
+}
+
+nav ul {
+    margin: -40px 0 0 0;
+}
+
+
+
+/*******************************************************
+5: Intro
+********************************************************/
+
+#intro {
+    background: rgba(255, 255, 255, 0.06);
+    text-align: center;
+    width: 1020px;
+    -webkit-box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    left: 50%;
+    margin: 61px auto 0 -510px;
+    padding: 0;
+}
+
+#intro h1 {
+    padding: 40px 0 0 0;
+}
+
+#intro p {
+    font-size: 22px;
+    line-height: 30px;
+    margin: 0 0 50px 0;
+}
+
+ul.social-intro {
+    margin: 0 0 50px 0;
+    position: relative;
+}
+
+ul.social-intro li {
+    display: inline;
+    margin: 0 5px;
+}
+
+.intro-pic {
+    background: url(../images/intro.png) no-repeat;
+    background-position: bottom center;
+    width: 1020px;
+    height: 300px;
+    margin: -150px 0 0 -40px;
+    position: relative;
+    z-index: -1;
+}
+
+
+
+/*******************************************************
+6: Work
+********************************************************/
+
+#work {
+    background: rgba(255, 255, 255, 0.06);
+    margin: 730px auto 0 auto;
+    padding: 80px 0 50px 0;
+    text-align: center;
+    width: 1020px;
+    -webkit-box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+}
+
+p.proj-title {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: -90px 0 10px 0;
+}
+
+p.proj-desc {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0 0 40px 0;
+    opacity: 0.8;
+}
+
+
+/******* Work Hexagon Shapes *******/
+
+.hexagon {
+    overflow: hidden;
+    visibility: hidden;
+    -webkit-transform: rotate(120deg);
+    -moz-transform: rotate(120deg);
+    -o-transform: rotate(120deg);
+    transform: rotate(120deg);
+    cursor: pointer;
+    margin-top: -50px;
+}
+
+.hexagon-in1 {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -o-transform: rotate(-60deg);
+    transform: rotate(-60deg);
+}
+
+.hexagon-pic1, .hexagon-pic2, .hexagon-pic3, .hexagon-pic4, .hexagon-pic5, .hexagon-pic6, .hexagon-pic7, .hexagon-pic8 {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    visibility: visible;
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -o-transform: rotate(-60deg);
+    transform: rotate(-60deg);
+    -webkit-transition: background-position 0.5s ease-out;
+    -moz-transition: background-position 0.5s ease-out;
+    -o-transition: background-position 0.5s ease-out;
+}
+
+.hexagon-pic1 {
+    background-image: url(../images/work-pic1.jpg);
+}
+
+.hexagon-pic2 {
+    background-image: url(../images/work-pic2.jpg);
+}
+
+.hexagon-pic3 {
+    background-image: url(../images/work-pic3.jpg);
+}
+
+.hexagon-pic4 {
+    background-image: url(../images/work-pic4.jpg);
+}
+
+.hexagon-pic5 {
+    background-image: url(../images/work-pic5.jpg);
+}
+
+.hexagon-pic6 {
+    background-image: url(../images/work-pic6.jpg);
+}
+
+.hexagon-pic7 {
+    background-image: url(../images/work-pic7.jpg);
+}
+
+.hexagon-pic8 {
+    background-image: url(../images/work-pic8.jpg);
+}
+
+.hexagon-pic1:hover, .hexagon-pic2:hover, .hexagon-pic3:hover, .hexagon-pic4:hover, .hexagon-pic5:hover, .hexagon-pic6:hover, .hexagon-pic7:hover, .hexagon-pic8:hover {
+    background-position: 80%;
+
+}
+
+.hexagon2 {
+    width: 164px;
+    height: 400px;
+    margin: -80px 0 0 20px;
+}
+
+
+/******* Quotes *******/
+
+.quotes {
+    margin-top: 30px;
+}
+
+.quotes .line {
+    margin-bottom: 55px;
+}
+
+.quotes p {
+    font-size: 22px;
+    font-style: italic;
+    line-height: 34px;
+    margin: -10px 0;
+    opacity: 0.7;
+}
+
+
+
+/*******************************************************
+7: Work Single
+********************************************************/
+
+.work-single #work {
+    margin: 60px auto 0 auto;
+}
+
+.work-single .proj-title {
+    margin: 10px 0 6px 0;
+    text-align: left;
+}
+
+.work-single .proj-desc {
+    text-align: left;
+}
+
+.proj-info .proj-title {
+}
+
+.proj-info .proj-desc {
+    margin-bottom: 15px;
+}
+
+.work-single img {
+    border: 1px solid #fff;
+}
+
+
+/*******************************************************
+8: Services
+********************************************************/
+
+#services {
+    background: rgba(255, 255, 255, 0.06);
+    margin: 90px auto 0 auto;
+    padding: 80px 0 80px 0;
+    width: 1020px;
+    -webkit-box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.1);
+}
+
+.main-services {
+    text-align: center;
+    margin: 30px 0 0 0;
+}
+
+img.services-chart {
+    margin-bottom: 20px;
+}
+
+p.serv-title {
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 18px 0 18px 0;
+}
+
+p.serv-desc {
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+.more-services {
+    margin: 60px 0 40px 0;
+    border: 1px dotted #fff;
+    display: inline-block;
+}
+
+.more-services h4 {
+    display: inline-block;
+    margin: 0 15px 15px 0;
+}
+
+.more-services p {
+    margin: 0;
+}
+
+.m-serv-title {
+    padding: 30px;
+}
+
+.m-serv1 {
+    border-left: 1px dotted #fff;
+    padding: 20px;
+}
+
+.m-serv2 {
+    border-top: 1px dotted #fff;
+    border-left: 1px dotted #fff;
+    padding: 20px;
+    margin-right: -10px;
+}
+
+.m-serv3 {
+    border-left: 1px dotted #fff;
+    padding: 20px;
+    margin-left: -10px;
+}
+
+.m-serv4 {
+    border-top: 1px dotted #fff;
+    border-left: 1px dotted #fff;
+    padding: 20px;
+    margin-left: -10px;
+}
+
+p.serv2-title {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 0 5px 12px;
+    display: inline-block;
+}
+
+
+/******* Pricing Tables *******/
+
+.pricing-tables {
+    margin: 65px 0 0 0;
+}
+
+.pricing-tables h3 {
+    margin: 0 0 20px 0;
+}
+
+.pt-1 {
+    text-align: center;
+    padding: 30px 10px;
+    border: 3px solid #fff;
+}
+
+p.pt-title {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+p.pt-price {
+    font-size: 65px;
+    font-weight: 600;
+    margin-bottom: 35px;
+}
+
+span.pt-small {
+    font-size: 22px;
+}
+
+.pricing-tables ul {
+    margin-bottom: 30px;
+    text-align: left;
+    padding-left: 45px;
+}
+
+.pricing-tables ul li {
+    font-size: 18px;
+}
+
+
+
+/*******************************************************
+9: About
+********************************************************/
+
+#about {
+    background: rgba(255, 255, 255, 0.06);
+    margin: 90px auto 0 auto;
+    padding: 80px 0 80px 0;
+    width: 1020px;
+    -webkit-box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.1);
+}
+
+p.profile-name {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+}
+
+p.profile-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+p.profile-text {
+    opacity: 0.8;
+}
+
+ul.social-profile li {
+    display: inline;
+    margin-right: 7px;
+    opacity: 0.7;
+}
+
+ul.social-profile li:hover {
+    opacity: 1;
+}
+
+.clients {
+    text-align: center;
+    margin: 35px 0 0 0; 
+}
+
+.skill-frame {
+    width: 100%;
+    height:20px;
+    border: 1px dashed #fff;
+}
+
+.skill-fill-1, .skill-fill-2, .skill-fill-3, .skill-fill-4, .skill-fill-5, .skill-fill-6 {
+    background: #fff;
+    height: 22px;
+    margin: -22px 0 15px 0;
+}
+
+.skill-fill-1 {
+    width: 85%;
+}
+
+.skill-fill-2 {
+    width: 80%;
+}
+
+.skill-fill-3 {
+    width: 88%;
+}
+
+.skill-fill-4 {
+    width: 90%;
+}
+
+.skill-fill-5 {
+    width: 76%;
+}
+
+.skill-fill-6 {
+    width: 72%;
+}
+
+ul.skill-list li {
+    display: list-item;
+    padding: 2px 0 0 0;
+    margin: 0 0 17px 0;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.team {
+    margin: 60px 0 0 0;
+    text-align: center;
+}
+
+.team .profile-name {
+    padding: 10px 0 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+
+
+/*******************************************************
+10: Blog
+********************************************************/
+
+#blog {
+    background: rgba(255, 255, 255, 0.06);
+    margin: 90px auto 0 auto;
+    padding: 80px 0 65px 0;
+    width: 1020px;
+    -webkit-box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.1);
+}
+
+.post-info {
+    vertical-align: top;
+    display: inline-block;
+    width: 68px;
+    margin: 0 14px 0 0;
+}
+
+.post-date {
+    text-align: center;
+    border: 1px solid #fff;
+    width: 68px;
+    display: inline-block;
+    vertical-align: top;
+    padding: 5px 0;
+    margin: 0 0 15px 0;
+}
+
+p.month {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 3px 0 0 0;
+}
+
+p.day {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+
+.meta p {
+    font-size: 12px;
+    line-height: 19px;
+    margin: 0 0 8px 0;
+    opacity: 0.7;
+}
+
+.meta p:hover {
+    opacity: 1;
+}
+
+.meta img {
+    margin-right: 5px;
+    vertical-align: top;
+}
+
+.post-content {
+    display: inline-block;
+    width: 614px;
+}
+
+.post-content img {
+    border: 1px solid #fff;
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+p.post-title {
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+p.post-text {
+    opacity: 0.7;
+}
+
+.post .button {
+    margin-bottom: 60px;
+}
+
+
+/******* Sidebar *******/
+
+.sidebar {
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    padding-left: 20px;
+}
+
+.sidebar p {
+    margin: 0;
+    line-height: 20px;
+    color: #fff;
+}
+
+p.s-small {
+    font-size: 11px;
+    opacity: 0.7;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+.sidebar ul {
+    list-style: circle;
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+
+.sidebar ul.popular {
+    list-style: none;
+    margin-left: 0;
+}
+
+.sidebar ul li {
+    margin: 0 0 10px 0;
+}
+
+
+
+/*******************************************************
+11: Single Post
+********************************************************/
+
+p.user-name {
+    font-size: 15px;
+    font-weight: 600;
+    margin:  0;
+}
+
+p.user-date {
+    font-size: 12px;
+    margin-bottom: 4px;
+    opacity: 0.8;
+}
+
+p.user-text {
+    font-size: 13px;
+    opacity: 0.9;
+    margin-bottom: 8px;
+}
+
+.comment .button {
+    padding: 3px 7px;
+    margin-bottom: 40px;
+}
+
+.comments-form {
+    margin-top: 30px;
+}
+
+
+
+/*******************************************************
+12: Footer
+********************************************************/
+
+footer {
+    height: 490px;
+    position: relative;
+    z-index: -2;
+    /*background-image: url(../images/mountain-footer.png), url(../images/bg-footer.jpg);*/
+    background: rgba(44, 44, 44, 0.6);
+    background-position: bottom center, bottom center;
+    background-repeat: no-repeat, repeat;
+    background-attachment: fixed;
+    /*background-size: auto, cover;*/
+    margin: 0;
+}
+
+.footer-container {
+    background: rgba(255, 255, 255, 0.03);
+    width: 1020px;
+    position: fixed;
+    z-index: -1;
+    left: 50%;
+    margin-left: -510px;
+    bottom: 0;
+    padding: 60px 0 20px 0;
+    -webkit-box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+footer ul li {
+    display: inline;
+    margin-right: 7px;
+    opacity: 0.7;
+}
+
+footer ul li:hover {
+    opacity: 1;
+}
+
+.quform-outer {
+    margin-top: 10px;
+}
+
+.copyright {
+    border-top: 1px dotted rgba(255, 255, 255, 0.25);
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 15px;
+}
+
+.copyright p {
+    font-size: 12px;
+    margin: 0;
+}
+
+
+
+/*******************************************************
+13: Media Queries
+********************************************************/
+
+	/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (max-width: 1024px) {
+        
+        #intro, #work, #services, #about, #blog, footer {
+            width: 100%;
+        }
+    
+        #intro {
+            position: relative;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            margin: 0;
+            left: 0;
+        }
+        
+        .intro-pic {
+            background: url(../images/intro.png) no-repeat;
+            background-position: bottom center;
+            position: relative;
+            margin-left: -40px;
+            display: block;
+        }
+
+        #work {
+            margin-top: 40px; 
+        }
+        
+        .m-serv-title img {
+            display: none;
+        }
+
+        .pricing-tables ul {
+            padding-left: 25px;
+        }
+
+        .post-info {
+            width: 18%;
+        }
+        
+        .post-content {
+            display: inline-block;
+            width: 75%;
+        }
+
+    }
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 959px) {
+        
+        .intro-pic {
+            margin-left: -120px;
+        }
+    
+    }
+
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 767px) {
+        
+        ul.firstnav li, nav ul li {
+            display: inline;
+            margin: 0 15px;
+            color: #fff;
+        }
+    
+        h2 {
+            line-height: 75px
+        }
+    
+        #intro h1 {
+            font-size: 90px;
+            line-height: 90px;
+            padding: 70px 0 0 0;
+        }
+        
+        #intro p {
+            font-size: 16px;
+            line-height: 26px;  
+        }
+        
+        .intro-pic {
+            margin-left: -300px;
+            margin-top: -200px;
+            background-size: 80%;
+        }
+
+        .hexagon {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: -100px;
+        }
+
+        .quotes p {
+            font-size: 16px;
+            line-height: 30px;
+            margin: 0;
+        }
+
+        p.serv-desc {
+            margin-bottom: 50px;
+        }
+
+        .m-serv1, .m-serv2, .m-serv3, .m-serv4 {
+            border-top: 1px dotted #fff;
+            margin: 0;
+            padding: 30px;
+        }
+    
+        .pt-1 {
+            width: 250px;
+            margin: 0 auto 40px auto;
+        }
+    
+        .pricing-tables ul {
+            text-align: center;
+        }
+    
+        .profile {
+            text-align: center;
+        }
+    
+        ul.social-profile {
+            margin-bottom: 40px;
+        }
+    
+        ul.skill-list {
+            margin: -221px 0 0 10px;
+            text-align:left;
+            color: #393939;
+        }
+        
+        p.post-title {
+            line-height: 34px;
+        }
+
+        .sidebar {
+            border-left: none;
+            padding-left: 0;
+        }
+
+        footer {
+            height: auto;
+            overflow: hidden;
+        }
+    
+        .footer-container {
+            position: relative;
+            background: none;
+        }
+    
+        .quform-outer, .quform-theme-custom-custom {
+            display: none;
+        }
+
+        .copyright p {
+            padding-bottom: 10px;
+        }
+    
+    }
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (max-width: 479px) {
+    
+        ul.firstnav li, nav ul li {
+            display: inline;
+            margin: 0 3px;
+            color: #fff;
+            text-align: center;
+        }
+    
+        .ha-header-front a {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 12px;
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        
+        nav, nav ul {
+            text-align: center;
+            width: 100%;
+        }
+        
+        .post-info, .post-date {
+            width: 50px;
+            margin-right: 6px;
+        }
+
+    }

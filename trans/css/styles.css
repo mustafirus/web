@@ -1,0 +1,417 @@
+/* 01. Global Reset */
+/*-------------------*/
+body, html  { height: 100%}
+html, body, div, span, applet, object, iframe,
+blockquote, pre, a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+caption{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	}
+body { line-height: 1}
+ol, ul { list-style: none}
+blockquote, q { quotes: none}
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none}
+:focus { outline: 0}
+del { text-decoration: line-through}
+
+/* 02. General Styles */
+/*---------------------*/
+body {
+	font-family: 'Open Sans', helvetica, arial, sans-serif;
+	font-weight: normal;
+	background: #06317E;
+	color: #FFF;
+	margin: 0;
+}
+h1 {
+text-transform: uppercase;
+font-weight: 700;
+font-size: 31px;
+text-align: center;
+margin: 10px 0;
+color: rgba(255, 255, 255, 0.75);
+}
+p {
+	text-align: center;
+	font-size: 14px;
+	font-weight:300
+}
+a {
+	text-decoration: none;
+	color: #fff;
+}
+textarea, input {
+	outline: none;
+}
+
+.clear{
+	clear:both;
+}
+.container {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+.wrapper {
+	position: absolute;
+	height: 560px;
+	width: 650px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	top: 10%;
+}
+.hide {
+	opacity: 0;
+}
+.noise {
+	background-image: url("../images/noise.png");
+	opacity: 0.050;
+}
+.overlay {
+	  position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: 0;
+}
+
+/* 03. Header Styles */
+/*---------------------*/
+.header {
+	display: block;
+	overflow: hidden;
+	padding: 0 0 20px;
+}
+.logo {
+width: 110px;
+margin: 0 auto;
+}
+.desc {
+padding: 0 20px 0 20px;
+margin: 0 auto;
+}
+
+/* 04. Timer Styles */
+/*-------------------*/
+#timer {
+margin: 35px auto 55px auto;
+display: block;
+position: relative;
+padding: 0 20px;
+float: left;
+}
+.timer_box {
+float: left;
+width: 124px;
+height: 64px;
+box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.5);
+background-color: rgba(255, 255, 255, 0.2);
+transition: all 0.3s;
+border-radius: 50%;
+margin: 0 14px;
+padding: 30px 0;
+}
+.timer_box:hover {
+	background-color: rgba(255, 255, 255, 0.35);
+}
+.timer_box strong{
+	font-size: 56px;
+	font-family: 'Roboto', helvetica, arial, sans-serif;
+	font-weight: 300;
+}
+.timer_box p {
+font-family: 'Roboto', helvetica, arial, sans-serif;
+font-weight: 300;
+margin: 0;
+text-transform: uppercase;
+font-size: 10px;
+color: rgba(255, 255, 255, 0.75);
+line-height: 10px;
+}
+#days, #hours, #minutes, #seconds {
+	text-align: center;
+}
+#message p {
+	margin: 0 0 20px 0;
+	text-align: center;
+	font-size: 14px;
+	font-weight:300
+}
+
+/* 05. Tabs Styles */
+/*------------------*/
+.sky-tabs,
+.sky-tabs * {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	border: 0;
+	background: none;
+}
+.sky-tabs {
+	position: relative;
+	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 0;
+	text-align: left;
+	color: #666;
+}
+.sky-tabs > input {
+	position: absolute;
+	display: none;
+}
+.sky-tabs > label {
+	position: relative;
+	z-index: 1;
+	font-size: 13px;
+	float: left;
+	width: 50px;
+	height: 50px;
+	border-radius: 1px;
+	transition: all 0.3s;
+margin: 0px auto;
+float: left;
+}
+#Tab1 {
+position: absolute;
+right: 55px;
+left: 0px;
+top: -70px;
+}
+#Tab2 {
+position: absolute;
+right: 0px;
+left: 55px;
+top: -70px;
+}
+.sky-tabs > label.inverse {
+	float: right;
+	padding-right: 0;
+	padding-left: 1px;
+}
+.sky-tabs > label.disabled {
+	cursor: default;
+}
+.sky-tabs > label span {
+	display: block;
+	text-align: center;
+	width: 50px;
+	color: #0C4CBE;
+	background: rgba(255, 255, 255, 0.9);
+	height: 50px;
+border-radius: 50%;
+}
+.sky-tabs > label span span {
+	background: transparent;
+	font-size: 16px;
+	text-align: center;
+	line-height: 50px;
+	cursor: pointer;
+	color: #0C4CBE;
+}
+.sky-tabs > label.disabled span {
+	background: transparent;
+	color: inherit;
+}
+.sky-tabs > input:checked + label {
+	cursor: pointer;
+}
+.sky-tabs > ul {
+list-style: none;
+position: relative;
+display: block;
+font-size: 13px;
+margin: 60px 0 0px 0;
+}
+.sky-tabs > ul > li {
+	position: absolute;
+	width: 100%;
+	overflow: auto;
+	box-sizing: border-box;
+	opacity: 0;
+	transition: all 0.8s;
+	min-height: 100px;
+}
+.sky-tabs > .sky-tab-content-1:checked ~ ul > .sky-tab-content-1,
+.sky-tabs > .sky-tab-content-2:checked ~ ul > .sky-tab-content-2 {
+	z-index: 1;
+	top: 0;
+	left: 0;
+	opacity: 1;
+}
+
+/* 06. Social Styles */
+/*-------------------*/
+.social {
+	margin: 0 auto !important;
+	display: block;
+	width: 69%;
+}
+.social ul li {
+	float: left;
+	padding: 7px 0;
+}
+
+.social ul li a {
+	line-height: 48px;
+	text-align: center;
+	margin: 0 8px;
+	font-size: 12px;
+}
+.hovicon {
+	display: inline-block;
+	cursor: pointer;
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	text-align: center;
+	position: relative;
+	text-decoration: none;
+	z-index: 1;
+	color: #fff;
+}
+.hovicon:after {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	content:'';
+	 box-sizing: content-box;
+}
+.hovicon:before {
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	display: block;
+}
+.hovicon.effect {
+	transition: box-shadow 0.2s;
+}
+.hovicon.effect:after {
+	top: 0;
+	left: 0;
+	padding: 0;
+	box-shadow: 0 0 0 3px #fff;
+	transition: transform 0.2s, opacity 0.2s;
+}
+ .hovicon.effect.sub-a:hover:after {
+	transform: scale(0.85);
+	opacity: 0.5;
+}
+.hovicon.effect.sub-a:hover {
+	box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.9);
+	color: #fff;
+}
+.hovicon.effect.sub-a:hover i {
+	color: #fff;
+}
+
+/* 07. Subscribe Styles */
+/*----------------------*/
+div.subscribe {
+	width: 420px;
+	height: 55px;
+	padding-top: 6px;
+	margin: 0 auto;
+}
+#subscriberEmail {
+	position: relative;
+	float: left;
+	width: 280px;
+	height: 50px;
+	font-family: 'Open Sans', helvetica, arial, sans-serif;
+	font-size: 14px;
+	letter-spacing: 1px;
+	text-indent: 10px;
+	color:#fff;
+	border-radius: 3px; 
+	outline: none;
+	transition: all 0.3s;
+}
+input[type=text] {
+	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.75);
+	margin: 0 10px 0 0;
+}
+
+#subscribeButton {
+	position: relative;
+	float: left;
+	display: inline-block;
+	margin-left: 5px;
+	margin-bottom: 2px;
+	width: 125px;
+	height: 50px;
+	text-align: center;
+	font-family: 'Open Sans', helvetica, arial, sans-serif;
+	font-size: 14px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #fff;
+	line-height: 50px;
+	vertical-align: middle;	
+	border-radius: 3px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.75);
+	transition: all 0.3s;
+}
+#subscribeButton:hover {
+	text-decoration: none;
+	background-color: rgba(255, 255, 255, 0.75);
+	color: #010EA0;
+	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.75);
+}
+.loader {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #06317E;
+	z-index: 9999999999;
+}
+
+.loader img {
+	position: absolute;
+	top: 48%;
+	left: 48%; 
+}
+
+/* 08. Responsive Styles */
+/*-----------------------*/
+@media (max-width: 767px) {
+.wrapper {width: 460px;}
+.header {padding: 0;}
+.logo {float: none; margin: 0 auto;}
+.desc {float: none; border-left: none; width: 425px; margin: 20px auto 0 auto; padding:0;}
+h1 {font-size: 29px; text-align: center;}
+.timer_box {box-shadow: none; background: none !important; width:85px; }
+#timer {padding: 0; margin: 25px auto;}
+.timer_box p {color: #fff;}
+#message p {margin: 0 0 20px 0;}
+}
+
+@media (max-width: 340px) {
+.wrapper {width: 300px; top:7%;}
+.header {padding: 0;}
+.logo {float: none; margin: 0 auto;}
+.desc {float: none; border-left: none; width: 300px; margin: 20px auto 0 auto; padding:0;}
+h1 {font-size: 29px; text-align: center; margin: 10px 0 0 0;}
+.sky-tabs {display: none;}
+.timer_box {box-shadow: none; background: none !important; width:120px; }
+.timer_box p {color: #fff;}
+#message p {margin: 0;}
+}
